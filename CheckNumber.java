@@ -17,19 +17,17 @@ public class CheckNumber
 
 	
 	public static boolean isPrime(int value)
-	{
-		if (value < 2) 
+	{       
+		int counter = 2;
+       		if (value == 1) return false;
+        	while (counter <= Math.sqrt(value))
 		{
-			return false;
-		}
-		
-		for(int i = 2; i * i < value; i++)
-		{
-			if (value % i == 0)
+           		if (value % counter == 0)
 			{
-				return false;
-			}
-		}
+               		 return false;
+            		}
+            		counter++;
+        	}
 		return true;
 	}
 	
